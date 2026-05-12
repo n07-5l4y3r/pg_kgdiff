@@ -304,7 +304,7 @@ ARG PG_JSONSCHEMA_COMMIT
 
 WORKDIR /build
 
-RUN git clone https://github.com/supabase/pg_jsonschema.git \
+RUN git clone https://github.com/n07-5l4y3r/pg_jsonschema.git \
  && cd pg_jsonschema \
  && git checkout "tags/${PG_JSONSCHEMA_TAG}" \
  && test "$(git rev-parse HEAD)" = "${PG_JSONSCHEMA_COMMIT}"
