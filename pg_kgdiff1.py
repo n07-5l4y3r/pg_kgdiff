@@ -65,7 +65,9 @@ def kg_info(patch_data) -> dict:
 
     magic = info.get("magic")
     if isinstance(magic, bytes):
-        info["magic"] = magic.decode("ascii", errors="replace")
+        info["magic_hex"] = magic.hex()
+        info["magic_ascii"] = magic.rstrip(b"\x00").decode("ascii", errors="replace")
+        del info["magic"]
 
     return info
 
