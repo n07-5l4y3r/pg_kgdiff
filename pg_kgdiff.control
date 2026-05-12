@@ -1,0 +1,6 @@
+# pg_kgdiff.control
+comment = 'KDDIFF1 bytea diff/patch functions backed by Cython and PL/Python'
+default_version = '0.1.0'
+relocatable = true
+requires = 'plpython3u'
+superuser = true
